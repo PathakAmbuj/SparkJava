@@ -1,0 +1,4 @@
+ATRIBUTE_NAME,TYPE,FORMAT
+NAME,string
+EMP_ID,int
+JOIN_DATE,date,yyyy-mm-dd

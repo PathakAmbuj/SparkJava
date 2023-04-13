@@ -1,0 +1,103 @@
+2023-04-13 12:41:38 INFO  SparkContext:54 - Running Spark version 2.3.0
+2023-04-13 12:41:38 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+2023-04-13 12:41:38 ERROR Shell:396 - Failed to locate the winutils binary in the hadoop binary path
+java.io.IOException: Could not locate executable null\bin\winutils.exe in the Hadoop binaries.
+	at org.apache.hadoop.util.Shell.getQualifiedBinPath(Shell.java:378)
+	at org.apache.hadoop.util.Shell.getWinUtilsPath(Shell.java:393)
+	at org.apache.hadoop.util.Shell.<clinit>(Shell.java:386)
+	at org.apache.hadoop.util.StringUtils.<clinit>(StringUtils.java:79)
+	at org.apache.hadoop.security.Groups.parseStaticMapping(Groups.java:116)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:93)
+	at org.apache.hadoop.security.Groups.<init>(Groups.java:73)
+	at org.apache.hadoop.security.Groups.getUserToGroupsMappingService(Groups.java:293)
+	at org.apache.hadoop.security.UserGroupInformation.initialize(UserGroupInformation.java:283)
+	at org.apache.hadoop.security.UserGroupInformation.ensureInitialized(UserGroupInformation.java:260)
+	at org.apache.hadoop.security.UserGroupInformation.loginUserFromSubject(UserGroupInformation.java:789)
+	at org.apache.hadoop.security.UserGroupInformation.getLoginUser(UserGroupInformation.java:774)
+	at org.apache.hadoop.security.UserGroupInformation.getCurrentUser(UserGroupInformation.java:647)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2464)
+	at org.apache.spark.util.Utils$$anonfun$getCurrentUserName$1.apply(Utils.scala:2464)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.util.Utils$.getCurrentUserName(Utils.scala:2464)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:292)
+	at org.apache.spark.SparkContext$.getOrCreate(SparkContext.scala:2486)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:930)
+	at org.apache.spark.sql.SparkSession$Builder$$anonfun$7.apply(SparkSession.scala:921)
+	at scala.Option.getOrElse(Option.scala:121)
+	at org.apache.spark.sql.SparkSession$Builder.getOrCreate(SparkSession.scala:921)
+	at ProfilingTest.main(ProfilingTest.java:24)
+2023-04-13 12:41:38 INFO  SparkContext:54 - Submitted application: profiling
+2023-04-13 12:41:39 INFO  SecurityManager:54 - Changing view acls to: ambuj
+2023-04-13 12:41:39 INFO  SecurityManager:54 - Changing modify acls to: ambuj
+2023-04-13 12:41:39 INFO  SecurityManager:54 - Changing view acls groups to: 
+2023-04-13 12:41:39 INFO  SecurityManager:54 - Changing modify acls groups to: 
+2023-04-13 12:41:39 INFO  SecurityManager:54 - SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(ambuj); groups with view permissions: Set(); users  with modify permissions: Set(ambuj); groups with modify permissions: Set()
+2023-04-13 12:41:40 INFO  Utils:54 - Successfully started service 'sparkDriver' on port 55714.
+2023-04-13 12:41:40 INFO  SparkEnv:54 - Registering MapOutputTracker
+2023-04-13 12:41:40 INFO  SparkEnv:54 - Registering BlockManagerMaster
+2023-04-13 12:41:40 INFO  BlockManagerMasterEndpoint:54 - Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+2023-04-13 12:41:40 INFO  BlockManagerMasterEndpoint:54 - BlockManagerMasterEndpoint up
+2023-04-13 12:41:40 INFO  DiskBlockManager:54 - Created local directory at C:\Users\ambuj\AppData\Local\Temp\blockmgr-4dd5e7c0-406c-4171-97be-c2c8800c52ec
+2023-04-13 12:41:40 INFO  MemoryStore:54 - MemoryStore started with capacity 890.1 MB
+2023-04-13 12:41:40 INFO  SparkEnv:54 - Registering OutputCommitCoordinator
+2023-04-13 12:41:40 INFO  log:192 - Logging initialized @2556ms
+2023-04-13 12:41:40 INFO  Server:346 - jetty-9.3.z-SNAPSHOT
+2023-04-13 12:41:40 INFO  Server:414 - Started @2629ms
+2023-04-13 12:41:40 INFO  AbstractConnector:278 - Started ServerConnector@7adf16aa{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2023-04-13 12:41:40 INFO  Utils:54 - Successfully started service 'SparkUI' on port 4040.
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7db82169{/jobs,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@631e06ab{/jobs/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2a3591c5{/jobs/job,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@346a361{/jobs/job/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@107ed6fc{/stages,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1643d68f{/stages/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@186978a6{/stages/stage,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@4052274f{/stages/stage/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@132ddbab{/stages/pool,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@297ea53a{/stages/pool/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@acb0951{/storage,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@5bf22f18{/storage/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@267f474e{/storage/rdd,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7a7471ce{/storage/rdd/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@28276e50{/environment,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@62e70ea3{/environment/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@3efe7086{/executors,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@675d8c96{/executors/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@741b3bc3{/executors/threadDump,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@2ed3b1f5{/executors/threadDump/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@63648ee9{/static,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@569bf9eb{/,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@61526469{/api,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7c351808{/jobs/job/kill,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@180e6ac4{/stages/stage/kill,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  SparkUI:54 - Bound SparkUI to 0.0.0.0, and started at http://LAPTOP-6R7VKFOA:4040
+2023-04-13 12:41:40 INFO  Executor:54 - Starting executor ID driver on host localhost
+2023-04-13 12:41:40 INFO  Utils:54 - Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 55727.
+2023-04-13 12:41:40 INFO  NettyBlockTransferService:54 - Server created on LAPTOP-6R7VKFOA:55727
+2023-04-13 12:41:40 INFO  BlockManager:54 - Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+2023-04-13 12:41:40 INFO  BlockManagerMaster:54 - Registering BlockManager BlockManagerId(driver, LAPTOP-6R7VKFOA, 55727, None)
+2023-04-13 12:41:40 INFO  BlockManagerMasterEndpoint:54 - Registering block manager LAPTOP-6R7VKFOA:55727 with 890.1 MB RAM, BlockManagerId(driver, LAPTOP-6R7VKFOA, 55727, None)
+2023-04-13 12:41:40 INFO  BlockManagerMaster:54 - Registered BlockManager BlockManagerId(driver, LAPTOP-6R7VKFOA, 55727, None)
+2023-04-13 12:41:40 INFO  BlockManager:54 - Initialized BlockManager: BlockManagerId(driver, LAPTOP-6R7VKFOA, 55727, None)
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@54f5f647{/metrics/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  SharedState:54 - Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/C:/Users/ambuj/IdeaProjects/SparkJava/spark-warehouse/').
+2023-04-13 12:41:40 INFO  SharedState:54 - Warehouse path is 'file:/C:/Users/ambuj/IdeaProjects/SparkJava/spark-warehouse/'.
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@779dfe55{/SQL,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@323659f8{/SQL/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@265c5d69{/SQL/execution,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@1286528d{/SQL/execution/json,null,AVAILABLE,@Spark}
+2023-04-13 12:41:40 INFO  ContextHandler:781 - Started o.s.j.s.ServletContextHandler@7b22ec89{/static/sql,null,AVAILABLE,@Spark}
+2023-04-13 12:41:41 INFO  StateStoreCoordinatorRef:54 - Registered StateStoreCoordinator endpoint
+2023-04-13 12:41:43 INFO  CodeGenerator:54 - Code generated in 205.984099 ms
+2023-04-13 12:41:43 INFO  CodeGenerator:54 - Code generated in 15.049498 ms
+2023-04-13 12:41:43 INFO  SparkContext:54 - Invoking stop() from shutdown hook
+2023-04-13 12:41:43 INFO  AbstractConnector:318 - Stopped Spark@7adf16aa{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+2023-04-13 12:41:43 INFO  SparkUI:54 - Stopped Spark web UI at http://LAPTOP-6R7VKFOA:4040
+2023-04-13 12:41:43 INFO  MapOutputTrackerMasterEndpoint:54 - MapOutputTrackerMasterEndpoint stopped!
+2023-04-13 12:41:43 INFO  MemoryStore:54 - MemoryStore cleared
+2023-04-13 12:41:43 INFO  BlockManager:54 - BlockManager stopped
+2023-04-13 12:41:43 INFO  BlockManagerMaster:54 - BlockManagerMaster stopped
+2023-04-13 12:41:43 INFO  OutputCommitCoordinator$OutputCommitCoordinatorEndpoint:54 - OutputCommitCoordinator stopped!
+2023-04-13 12:41:43 INFO  SparkContext:54 - Successfully stopped SparkContext
+2023-04-13 12:41:43 INFO  ShutdownHookManager:54 - Shutdown hook called
+2023-04-13 12:41:43 INFO  ShutdownHookManager:54 - Deleting directory C:\Users\ambuj\AppData\Local\Temp\spark-6701a2df-a2e8-4026-b5ba-97cbf718659f
